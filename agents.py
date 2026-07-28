@@ -11,7 +11,6 @@ llm = ChatOpenAI(model = "",temperature=0)
 
 def build_search_agents():
     return create_agent(
-        model = llm,
         
         
     )
