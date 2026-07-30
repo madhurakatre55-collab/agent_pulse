@@ -1,6 +1,6 @@
 langchain
 langgraph
-langchain-openai
+langchain-openaigit 
 langchain-community
 python-dotenv
 pydantic

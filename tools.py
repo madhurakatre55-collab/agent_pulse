@@ -1,5 +1,4 @@
 from unittest import result
-
 from langchain_core.tools import tool
 import requests
 from bs4 import BeautifulSoup
@@ -18,8 +17,9 @@ def web_search(query:str) -> str:
     
     for r in results['result']:
         out.append(
-            f"Title: {r['title']}\nURL: {r['url']}\n")
-    return result
+            f"Title: {r['title']}\nURL: {r['url']}\nSnippet:{r['content'][:300]}\n"
+            )
+    return "\n---\n".join(out)
 print(web_search.invoke("what are the recent news of war?"))
 
 @tool
@@ -33,5 +33,5 @@ def scrape_url(url:str) -> str:
         return soup.get_text(separator="\n",strip=True)[:3000]
     except Exception as e:
         return f"Could not scrape URL: {str(e)}"
-    
+print(scrape_url.invoke("url"))
         
