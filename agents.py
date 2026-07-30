@@ -13,14 +13,14 @@ llm = ChatOpenAI(model = "",temperature=0)
 def build_search_agents():
     return create_agent(
         model = llm,
-        tools = [web_serch]
+        tools = [web_serch],
     )
     
 #agent2
 def build_reader_agent():
     return create_agent(
         model = llm,
-        tools =[scrape_url]
+        tools =[scrape_url],
     )    
 # chain writer report 
 writer_prompt = ChatPromptsTemplate([
