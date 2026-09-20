@@ -3,11 +3,11 @@ from pipeline import run_research_pipeline
 
 st.set_page_config(
     page_title="AgentPulse — AI Research Assistant",
-    page_icon="🔎",
+    page_icon=,
     layout="wide",
 )
 
-st.title("🔎 AgentPulse")
+st.title(" AgentPulse")
 st.caption("A multi-agent research workflow powered by LangChain")
 
 with st.sidebar:
@@ -27,7 +27,7 @@ topic = st.text_input(
     "Enter a research topic",
     placeholder="e.g. Impact of AI on renewable energy",
 )
-run_clicked = st.button("🚀 Run Research", type="primary", use_container_width=True)
+run_clicked = st.button(" Run Research", type="primary", use_container_width=True)
 
 if run_clicked:
     if not topic.strip():
@@ -51,7 +51,7 @@ if "result" in st.session_state:
     st.success(f"Research complete for: **{st.session_state['topic']}**")
 
     tab_report, tab_feedback, tab_search, tab_scraped = st.tabs(
-        ["📄 Report", "🧐 Critic Feedback", "🔍 Search Results", "📰 Scraped Content"]
+        [" Report", " Critic Feedback", " Search Results", " Scraped Content"]
     )
 
     with tab_report:
